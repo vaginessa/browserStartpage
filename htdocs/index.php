@@ -28,7 +28,6 @@
 <html <?php
 	echo isset($projectLanguage) ? 'lang="'.$projectLanguage.'"' : FALSE;
 	echo isset($projectDirection) ? 'dir="'.$projectDirection.'"' : FALSE;
-	echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'"' : FALSE;
 	echo isset($theme)? 'class="'.$theme.'"' : FALSE;
 ?>>
 <head>
