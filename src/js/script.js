@@ -204,3 +204,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Modals
 		handleOverlayTriggers('js-modal-toggle');
 });
+
+// Add Service Worker
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', function() {
+		navigator.serviceWorker.register('/assets/js/serviceWorker.js').then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+		}, function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+		});
+	});
+}

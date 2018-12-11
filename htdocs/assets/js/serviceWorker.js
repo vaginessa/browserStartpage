@@ -1,0 +1,1 @@
+var CACHE_NAME="startpageCache",urlsToCache=["/","/data/data.json","/assets/qr-codes/*","/assets/thumbnails/*","/assets/wallpaper/*"];self.addEventListener("install",function(a){a.waitUntil(caches.open(CACHE_NAME).then(function(a){return console.log("Opened cache"),a.addAll(urlsToCache)}))});
